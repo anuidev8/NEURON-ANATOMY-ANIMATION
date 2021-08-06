@@ -1,0 +1,330 @@
+:root{
+    --primary-color:#205972;
+    --dark-color:#0D2F33;
+    --blue-color:#AEF4F2;
+    --green-light-color:#65FCAD;
+    --yellow-color:#EAC52D;
+    --padding-left:1em;
+
+    --w-structure-info:430px;
+    --p-top-extra-info:0;
+    /* CORE */
+    --w-core:0;
+    --w-extructure-info-core:50%;
+    --w-indicator-item-core:80%;
+    --p-indicator-core:2%;
+
+    /* SOMA */
+    --w-soma:-55%;
+    --p-indicator-soma: 52%;
+    --p-left-soma:38%;
+    --p-left-indicator-soma:-18%;
+    --w-extructure-info-soma:30%;
+
+    /* DENDITRAS */
+    --w-denditras:-25%;
+    --w-extructure-info-dendritas:70%;
+    --m-info-den:2em;
+    --p-indicator-den: 100%;
+    --p-indicator-den-top:-70%;
+    --p-indicator-den-left:-14%;
+    --m-left-den-container:2em;
+
+    /* AXON */
+    --w-axon:-24%;
+    --w-extructure-info-axon:60%;
+    --p-indicator-item:-3%;
+
+    /* SINAPSIS */
+    --p-indicator-item--sinapsis:-1%;
+    --w-inidicator-sinapsis:60%;
+
+    /* MIELINA */
+    --w-inidicator-mielina:58%;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'SourceSansPro-SemiBold';
+    min-height: 100vh;
+    background-color:var(--blue-color);
+    color: var(--primary-color);
+}
+
+
+/* UTILS */
+
+.main-title,.aviable-title{
+    font-size: 4rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+.f--bold{
+    font-family: 'SourceSansPro-Bold',sans-serif;  
+}
+.f--normal{
+    font-family: 'SourceSansPro-Regular',sans-serif;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+/* NEURO */
+
+
+.neuro-core,.neuro-branch{
+    position: absolute;
+
+}
+.neuro-core{
+    width: 40%;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+}
+.neuro-branch{
+    width: 40%;
+    top: 105%;
+    left: 14%;
+    transform-origin:top ;    
+    transform: rotate(-7deg);
+}
+
+/* INFO */
+.structure-items {
+    position: absolute;
+}
+.structure-items-right {
+    right: 0;
+}
+.structure-container{
+   /*  display: grid;
+    grid-template-columns: minmax(50%,400px) 1fr;
+    gap: 10px; */
+    padding: 4em 0em 0 0  ;
+    position: relative;
+    overflow: hidden;
+   
+}
+
+
+
+
+.extructure-info{
+    position: relative;
+
+}
+.extructure-info-title{
+    font-size: 4rem;
+    margin: 0;
+}
+
+.extructure-info-description{
+    font-size: 1.8rem;
+    margin: 0;
+}
+.extructure-info--core{
+    display: flex;
+    padding-left: var(--padding-left);
+   /*  height: 20%; */
+    justify-content: end;
+    flex-direction: column;
+   
+  
+    
+}
+
+.extructure-info--core .extructure-info-description{
+    width: var(--w-extructure-info-core);
+}
+
+.extructure-info--soma{
+    justify-content: end;
+    /* padding-left: var(--p-left-soma); */
+
+}
+
+.indicator-item{
+    position: absolute;
+    color: var(--primary-color);
+    width: 100%;
+    height: 80px;
+}
+
+.indicator-item--core{
+  top:10px;
+  width: var(--w-indicator-item-core);
+  left: var(--p-indicator-core);
+}
+
+.indicator-item svg{
+    width: 100%;
+    height: 100%;
+ 
+}
+.line-indicator,.circle-indicator{
+    position: absolute;
+}
+.circle-indicator{
+left: 32%;
+bottom: 15%;
+}
+
+
+/* EXTRA INFO */
+
+.extra-info{
+    position: relative;
+    width:var(--w-structure-info);
+    margin-left: 1.5em;
+    margin-top: 3.5em;
+    
+
+}
+
+.extra-info__content{
+    position: relative;
+    padding: .6em .9em;
+    border: 3.5px solid var(--primary-color);
+    background-color: var(--blue-color);
+    z-index: 1;
+}
+
+.extra-info-text{
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.extra-info__modal{
+   
+justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 9%;
+    left:4%;
+    background-color: var(--green-light-color);
+    transition: transform .3s ease;
+    z-index: 0;
+}
+.extra-info__modal-text{
+    
+    padding: 0 1em;
+    transform: translateY(40px);
+ 
+}
+
+.extra-info__modal--open{
+    transform: translateY(60%);
+    padding-top: var(--p-top-extra-info);
+} 
+
+.text-underline{
+    position: relative;
+}
+
+.text-underline::before{
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: var(--green-light-color);
+    z-index: -1;
+
+}
+.extra-info-action{
+    position: absolute;
+    bottom: 4%;
+    left: 40%;
+}
+
+.extra-info-button{
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border:3px solid var(--primary-color) ;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: var(--primary-color) ;
+    cursor: pointer;
+}
+
+.extra-info-button::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color:var( --yellow-color);
+    z-index: -1;
+}
+
+
+/* Footer */
+.footer{
+    margin-top: 120px;
+}
+.doc-reference{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.footer-content{
+    display: grid;
+    grid-template-columns: minmax(50%,400px) 1fr;
+    gap: 10px; 
+    padding: 1.8em 3em;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+}
+.footer-description{
+    justify-content: center; 
+    align-items: center;   
+}
+
+.develop-title{
+    font-size: 1.9rem;
+    margin: 0;
+}
+.contact-item{
+    font-size: 1.2rem;
+}
+.doc-reference-title{
+    margin: 0;
+}
+.doc-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.point-indicator-overlays{
+    opacity: .5;
+    transform: translateX(-2px);
+}
+
+
+@media (max-width:1000px) {
+    .is-visible{
+        display: none;
+    }
+}
+
+@media (min-width:1000px) {
+    .aviable-title{
+        display: none;
+    }
+}
+

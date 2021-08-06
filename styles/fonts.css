@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'SourceSansPro-Bold';
+    src: local('SourceSansPro-Bold'),url(../fonts/SourceSansPro-Bold.ttf);
+    font-display: swap;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'SourceSansPro-SemiBold';
+    src: local('SourceSansPro-Bold'),url(../fonts/SourceSansPro-SemiBold.ttf);
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SourceSansPro-Regular';
+    src: local('SourceSansPro-Regular'),url(../fonts/SourceSansPro-Regular.ttf);
+    font-display: swap;
+}

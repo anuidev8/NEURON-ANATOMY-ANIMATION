@@ -1,0 +1,124 @@
+/* CAPSULE */
+.capsule{
+    transform-origin: center;
+}
+
+/* CORE */
+#item-core{
+    left: var(--w-core);
+}
+/* SOMA */
+#item-soma{
+    right:var(--w-soma);
+ 
+
+}
+.extructure-info--soma .extructure-info-description{
+    width: var(--w-extructure-info-soma);
+}
+
+
+.extructure-info--soma .extructure-info-content{
+  
+    margin-top: 4%;
+    padding-left: 1em;
+
+}
+
+.indicator-item--soma{
+    top:18%;
+    left: var(--p-left-indicator-soma);
+    width:var(--p-indicator-soma);
+  }
+
+
+
+  /* DENDRITAS */
+
+  #item-dentritas{
+    right: var(--w-denditras);
+  }
+  .extructure-info--dentr .extructure-info-description{
+    width: var(--w-extructure-info-dendritas);
+}
+.extructure-info--dentr .extructure-info-content{
+    margin-top: var(--m-info-den);
+    margin-left: var(--m-left-den-container);
+}
+
+.indicator-item--dentr{
+    top: var(--p-indicator-den-top);
+    left: var(--p-indicator-den-left);
+    width: var(--p-indicator-den);
+}
+.indicator-item--dentr .indicator-item__line svg{
+    height: 250px;
+}
+.indicator-item--dentr .indicator-item__line .circles-indicator{
+    transform: translate(5px,22px);
+}
+
+/* AXON */
+
+#item-axon{
+    right: var(--w-axon);
+}
+.extructure-info--axon .extructure-info-description{
+    width: var(--w-extructure-info-axon);
+}
+
+.extructure-info--axon .indicator-item__line svg{
+    width: 280px;
+    height: 940px;
+    transform: translate(-100%,-40%);
+}
+
+.indicator-item--axon .indicator-item__line .circles-indicator{
+    transform: translate(9.5px,42%);
+}
+
+.extructure-info--axon .extructure-info-content{
+    
+    margin-left: 1em;
+}
+
+.extra-info-action--axon{
+    top: -4%;
+    left: -11%;
+}
+.extra-info__modal--axon{
+    justify-content: start;
+}
+
+.extra-info__modal--axon .extra-info__modal-text{
+    transform: translateY(14px);
+}
+
+/* MIELINA */
+
+#item-mielina {
+    left: 2%;
+}
+.extructure-info--mielina .extructure-info-description{
+    width: 40%;
+}
+
+.indicator-item--mielina{
+    width: var(--w-inidicator-mielina);
+    left: var(--p-indicator-item);
+}
+
+/* SINAPSIS */
+#item-sinapsis{
+    left: 2%;
+}
+
+.extructure-info--sinapsis .extructure-info-description{
+    width: 35%;
+}
+
+.indicator-item--sinapsis{
+    width:var(--w-inidicator-sinapsis);
+    left: var(--p-indicator-item--sinapsis);
+    
+}
